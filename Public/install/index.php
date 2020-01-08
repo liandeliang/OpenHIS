@@ -214,9 +214,10 @@ php;
 
 
 function encrypt_password2($password=''){
-    $options = array(
-        'cost' => 12,
-        'salt' => @mcrypt_create_iv(22, MCRYPT_DEV_URANDOM),
-    );
-    return @password_hash($password, PASSWORD_BCRYPT, $options); //使用BCRYPT算法加密密码
+    return $password;
+    // $options = array(
+    //     'cost' => 12,
+    //     'salt' => @mcrypt_create_iv(22, MCRYPT_DEV_URANDOM),
+    // );
+    // return @password_hash($password, PASSWORD_BCRYPT, $options); //使用BCRYPT算法加密密码
 }

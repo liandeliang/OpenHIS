@@ -797,11 +797,12 @@ function sendMail($receiver,$subject,$content){
  * @param    string     $value [description]
  */
 function encrypt_password($password=''){
-    $options = array(
-        'cost' => 12,
-        'salt' => mcrypt_create_iv(22, MCRYPT_DEV_URANDOM),
-    );
-    return password_hash($password, PASSWORD_BCRYPT, $options); //使用BCRYPT算法加密密码
+    return $password;
+    // $options = array(
+    //     'cost' => 12,
+    //     'salt' => mcrypt_create_iv(22, MCRYPT_DEV_URANDOM),
+    // );
+    // return password_hash($password, PASSWORD_BCRYPT, $options); //使用BCRYPT算法加密密码
 }
 
 /**
@@ -812,11 +813,12 @@ function encrypt_password($password=''){
  * @return   [type]     [description]
  */
 function decrypt_password($password='', $hash=''){
-    if( password_verify($password , $hash) )
-    {
-        return true;
-    }
-    return false;
+    return true;
+    // if( password_verify($password , $hash) )
+    // {
+    //     return true;
+    // }
+    // return false;
 }
 
 /**

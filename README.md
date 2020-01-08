@@ -35,3 +35,27 @@
 
 qq群：616207827
 
+### by liandelaing draft
+
+1. install xampp
+2. add below code apache\conf\extra\httpd-vhosts.conf
+<VirtualHost *:80>
+    ServerAdmin webmaster@dummy-host2.example.com
+    DocumentRoot "D:/work/git/his/OpenHIS"
+    ServerName dzmhis.com
+    ErrorLog "logs/dummy-dzmhis.com-error.log"
+    CustomLog "logs/dummy-dzmhis.com-access.log" common
+
+    <Directory "D:/work/git/his/OpenHIS">
+        Options Indexes FollowSymLinks Includes ExecCGI
+        AllowOverride All
+        Require all granted
+        Order allow,deny
+        Allow from all
+    </Directory>
+</VirtualHost>
+
+4. edit hosts:
+127.0.0.1 dzmhis.com
+
+5. browser: http://dzmhis.com/public/install/

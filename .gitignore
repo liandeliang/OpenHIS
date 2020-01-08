@@ -1,0 +1,4 @@
+/Application/Runtime/Cache/His
+/Public/install/*.lock
+/Application/Runtime/Logs/His/*.log
+/Application/Common/Conf/db.php
